@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<link rel="stylesheet" href="home.css">
+
+<title>
+
+welcome to St. Anthony's School
+</title>
+</head>
+<body>
+<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBmDC4nqFtEo0mf_HjEzcWc17JUORp8bJQ",
+    authDomain: "stantschool-49dcc.firebaseapp.com",
+    databaseURL: "https://stantschool-49dcc.firebaseio.com",
+    projectId: "stantschool-49dcc",
+    storageBucket: "stantschool-49dcc.appspot.com",
+    messagingSenderId: "464055172731"
+  };
+  firebase.initializeApp(config);
+
+</script>
+<script>
+  $(document).ready(function(){
+        $('#new').click(function(){
+		alert('okey');
+		        var database = firebase.database().ref();
+				database.child("test").set("hello");
+		});
+  });
+  </script>
+<header id="head"><center>Home</center></header>
+<button id="new"></button>
+</body>
+</html>
+
