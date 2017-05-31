@@ -2,7 +2,8 @@
 <head>
 <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
 <link rel="stylesheet" href="home.css">
-<link rel="manifest" href="manifest.json">
+<script src="jquery-3.2.1.min.js"></script>
+
 <title>
 
 welcome to St. Anthony's School
@@ -21,19 +22,41 @@ welcome to St. Anthony's School
     messagingSenderId: "464055172731"
   };
   firebase.initializeApp(config);
+  
+  // Get a reference to the database service
+var database = firebase.database();
 
 </script>
 <script>
   $(document).ready(function(){
         $('#new').click(function(){
-		alert('okey');
-		        var database = firebase.database().ref();
-				database.child("test").set("hello");
+		    $('#cont').hide();
+			$('#editnew').show(900);
 		});
+	
   });
   </script>
+  <div id="cont">
 <header id="head"><center>Home</center></header>
 <button id="new"></button>
+</div>
+<div id="editnew">
+<script>  
+var htm = document.getElementById('back');
+htm.addEventListener('click', function(){
+
+window.location="home.htm"
+
+});
+</script>
+<div id="post">
+<div id="back" align="right">
+</div>
+<textarea placeholder="Hey there!what is in your mind."> </textarea>
+<input type="file" id="imag" value="Upload"><br><button id="sum">Submit</button>
+
+</div>
+</div>
 </body>
 </html>
 
