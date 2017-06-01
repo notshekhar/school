@@ -1,5 +1,25 @@
 <html>
 <head>
+<!------------------------------------------------------------------------------------------------------------------------
+
+<center>
+<div class="post">
+<div class="tosp"></div>
+<div class="usr">Shekhar Tyagi<div>
+<hr>
+<img src="https://s-media-cache-ak0.pinimg.com/236x/ab/47/37/ab473736455bd286bc48505270db0cdc.jpg" class="im">
+<div class="para">being successfull is not the game of adult but the game of children because they don't get caught by dreaming</div>
+<br>
+<div class="br"></div>
+
+</div>
+</center>
+
+------------------------------------------------------------------------------------------------------------------------>
+
+
+
+
 <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
 <link rel="stylesheet" href="home.css">
 <script src="jquery-3.2.1.min.js"></script>
@@ -10,7 +30,92 @@ welcome to St. Anthony's School
 </title>
 </head>
 <body>
-<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+
+<div id="cont">
+<header id="head"><center>Home</center></header>
+<div id="esc"></div>
+
+
+<!--start new post-->
+<!------------------------------------------------------------------------------------------------------------------------>
+<center>
+<div class="post"><div class="tosp"></div>
+<div class="usr">Shekhar Tyagi<div>
+<hr>
+<img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAiiAAAAJGZmNDkxYWMxLTMyNDUtNGIyOC04ZWVhLTcyZjUwNTJmZWQyZg.png" class="im">
+<div class="para">being successfull is not the game of adult but the game of children because they don't get caught by dreaming</div>
+<br>
+<div class="br"></div>
+</div>
+</center>
+<!------------------------------------------------------------------------------------------------------------------------>
+
+<!------------------------------------------------------------------------------------------------------------------------>
+<center>
+<div class="post"><div class="tosp"></div>
+<div class="usr">Shekhar Tyagi<div>
+<hr>
+<img src="https://s-media-cache-ak0.pinimg.com/236x/ab/47/37/ab473736455bd286bc48505270db0cdc.jpg" class="im">
+<div class="para">being successfull is not the game of adult but the game of children because they don't get caught by dreaming</div>
+<br>
+<div class="br"></div>
+</div>
+</center>
+<!------------------------------------------------------------------------------------------------------------------------>
+
+
+<center>
+<div class="post"><div class="tosp"></div>
+<div class="usr">Shekhar Tyagi<div>
+<hr>
+<img src="https://s-media-cache-ak0.pinimg.com/236x/ab/47/37/ab473736455bd286bc48505270db0cdc.jpg" class="im">
+<div class="para">being successfull is not the game of adult but the game of children because they don't get caught by dreaming</div>
+<br>
+<div class="br"></div>
+
+</div>
+</center>
+
+<!--end-->
+
+<div id="new">
+</div>
+</div>
+
+
+<!--write post-->
+<div id="editnew">
+<div id="back" align="right">
+</div>
+
+<textarea placeholder="Hey there!what is in your mind."> </textarea>
+<input type="file" id="imag" value="Upload"><br><button id="sum" >Submit</button>
+
+<script>
+ $(document).ready(function(){
+        $('#new').click(function(){
+		    $('#cont').hide();
+			$('#editnew').show(900);
+			$('#new').css({
+			'transform': 'rotate(180deg)'	
+			});
+		});
+	
+  });
+
+  
+var htm = document.getElementById('back');
+htm.addEventListener('click', function(){
+ var editnew = document.getElementById('editnew');
+ var cont = document.getElementById('cont');
+ editnew.style.display="none";
+ cont.style.display="block";
+
+});
+</script>
+
+
+<script src="https://www.gstatic.com/firebasejs/4.1.0/firebase.js"></script>
 <script>
   // Initialize Firebase
   var config = {
@@ -23,40 +128,68 @@ welcome to St. Anthony's School
   };
   firebase.initializeApp(config);
   
-  // Get a reference to the database service
-var database = firebase.database();
-
-</script>
-<script>
-  $(document).ready(function(){
-        $('#new').click(function(){
-		    $('#cont').hide();
-			$('#editnew').show(900);
-		});
-	
-  });
-  </script>
-  <div id="cont">
-<header id="head"><center>Home</center></header>
-<button id="new"></button>
-</div>
-<div id="editnew">
-<script>  
-var htm = document.getElementById('back');
+var htm = document.getElementById('sum');
 htm.addEventListener('click', function(){
+      
+	  var storageRef = firebase.storage().ref();
+	   
+	   // File or Blob named mountains.jpg
+var file = ...
 
-window.location="home.htm"
+// Create the file metadata
+var metadata = {
+  contentType: 'image/jpeg'
+};
+
+// Upload file and metadata to the object 'images/mountains.jpg'
+var uploadTask = storageRef.child('images/' + file.name).put(file, metadata);
+
+// Listen for state changes, errors, and completion of the upload.
+uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
+  function(snapshot) {
+    // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+    var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+    console.log('Upload is ' + progress + '% done');
+    switch (snapshot.state) {
+      case firebase.storage.TaskState.PAUSED: // or 'paused'
+        console.log('Upload is paused');
+        break;
+      case firebase.storage.TaskState.RUNNING: // or 'running'
+        console.log('Upload is running');
+        break;
+    }
+  }, function(error) {
+
+  // A full list of error codes is available at
+  // https://firebase.google.com/docs/storage/web/handle-errors
+  switch (error.code) {
+    case 'storage/unauthorized':
+      // User doesn't have permission to access the object
+      break;
+
+    case 'storage/canceled':
+      // User canceled the upload
+      break;
+
+    ...
+
+    case 'storage/unknown':
+      // Unknown error occurred, inspect error.serverResponse
+      break;
+  }
+}, function() {
+  // Upload completed successfully, now we can get the download URL
+  var downloadURL = uploadTask.snapshot.downloadURL;
+});
+
+
+
 
 });
 </script>
-<div id="post">
-<div id="back" align="right">
-</div>
-<textarea placeholder="Hey there!what is in your mind."> </textarea>
-<input type="file" id="imag" value="Upload"><br><button id="sum">Submit</button>
 
-</div>
-</div>
+
+</div
+
 </body>
 </html>
-
