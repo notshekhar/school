@@ -110,6 +110,11 @@ hr{
 	height: 4px;
 }
 
+@media(max-width: 1120px){
+.post{
+    width: 45%;
+
+}
 @media(max-width: 1080px){
 .post{
     width: 50%;
