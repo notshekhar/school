@@ -109,7 +109,7 @@ hr{
 .tosp{
 	height: 4px;
 }
-@media(max-width: 800px){
+@media(max-width: 720px){
 .post{
     width: 90%;
 
