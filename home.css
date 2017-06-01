@@ -1,13 +1,13 @@
 #head {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	color: white;
-	background: red;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    color: white;
+    background: red;
     height: 50px;
-	width: 100%;
-	font-size: 30px;
-	
+    width: 100%;
+    font-size: 30px;
+    box-shadow: 0px 1px 4px 0px rgba(136, 136, 136, 0.77);
 }
 #new {
 	position: fixed;
@@ -21,6 +21,10 @@
 	border: none;
     box-shadow: 1px 2px 4px 0px #888888;
     outline: none;
+	content: url(ed.png);
+}
+#new:hover{
+    transform: rotate(180deg);	
 }
 #img {
 	position: relative;
@@ -30,7 +34,7 @@
 	display: none;
 }
 #cont{
-	display: non;
+	display: block;
 }
 body{
 	font-family: Tahoma;
@@ -67,7 +71,57 @@ textarea {
 	height: 50px;
 	width: 50px;
 }
+#esc{
+	height: 50px;
+}
+.post{
+	margin-top: 0px;
+	width: 40%;
+	top: 4px;
+	margin: 0 auto;
+    background: white;
+	box-shadow: 0px 2px 3px 0px rgba(136, 136, 136, 0.63);
+	border-radius: 2px;
+    cursor: pointer;
+}
+.im{
+	margin-top: 0px;
+	width: 100%;
+	border: none;
+	margin-bottom: 10px;
 
+}
+.para{
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 0px;
+}
+.usr{
+	
+	
+}
+hr{
+	width: 100%;
+}
+.br{
+	margin-bottom: 10px;
+}
+.tosp{
+	height: 4px;
+}
+@media(max-width: 1000px){
+.post{
+    width: 70%;
+
+}
+.im{
+	height: 200px;
+}
+
+
+
+
+}
 
 
 
