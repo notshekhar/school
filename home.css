@@ -109,6 +109,31 @@ hr{
 .tosp{
 	height: 4px;
 }
+
+@media(max-width: 1800px){
+.post{
+    width: 30%;
+
+}
+
+@media(max-width: 1080px){
+.post{
+    width: 50%;
+
+}
+
+@media(max-width: 1020px){
+.post{
+    width: 50%;
+
+}
+
+@media(max-width: 1000px){
+.post{
+    width: 60%;
+
+}
+	
 @media(max-width: 720px){
 .post{
     width: 90%;
@@ -122,7 +147,6 @@ hr{
 
 
 }
-
 
 
 
