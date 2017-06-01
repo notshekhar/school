@@ -111,7 +111,7 @@ hr{
 }
 @media(max-width: 1000px){
 .post{
-    width: 90%;
+    width: 100%;
 
 }
 .im{
