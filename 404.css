@@ -16,7 +16,7 @@ body{
 #err {
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKoAAACWCAMAAAB5EONmAAABwlBMV…+oTPry2dAqNZSdyE8VfbJGcSo/kQ2F+AO8pJJKKqkfMfU/hM/KaicmSuAAAAAASUVORK5CYII=);
+    background-image: url(offline.png);
     display: inline-block;
     height: 150px;
     width: 170px;
