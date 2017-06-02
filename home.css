@@ -113,22 +113,16 @@ hr{
 	
 @media(max-width: 1000px){
 .post{
-    width: 60%;
+    width: 90%;
 
 }
 .im{
 
 }
-
-
-
-
-}
-@media(max-width: 500px){
-.post{
-    width: 90%;
-
+body{
+    background: url(bac.png);	
 }
 
+}
 
 [https://www.canva.com/design/DACXDv17DW4/Cw3sHgu31Dh3KT9Xk5BPNQ/edit?layouts=&utm_source=onboarding]
