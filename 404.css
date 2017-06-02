@@ -16,7 +16,7 @@ body{
 #err {
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKoAAACWCAMAAAB5EONmAAABwlBMV…+oTPry2dAqNZSdyE8VfbJGcSo/kQ2F+AO8pJJKKqkfMfU/hM/KaicmSuAAAAAASUVORK5CYII=);
+    background-image: url(offline);
     display: inline-block;
     height: 150px;
     width: 170px;
@@ -28,4 +28,16 @@ body{
     text-align: center;
     top: 50%;
     width: 100%;
+}
+.message {
+    color: #60676f;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0 15px;
+}
+.link {
+    color: #576b95;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
 }
