@@ -32,12 +32,24 @@ Welcome to St. Anthony's School
 <body>
 
 <header id="head"><center></center></header>
-
+<div id="load"></div>
 <div id="cont">
   
   <div id="err"></div>
   <div class="message" data-sigil="error-message">No internet connection</div>
-  <a class="link" data-sigil="MPageError:retry">Try Again</a>
+  <a class="link" data-sigil="MPageError:retry" id="loader">Try Again</a>
+  <script>
+    var load = document.getElementById('cont');
+    var cont = document.getElementById('cont');
+    var htm = document.getElementById('loader');
+    htm.addEventListener('click', load);
+    function load(){
+         cont.style.display="none";
+         load.style.display="block";
+         
+    }
+    
+  </script>
 </div>
 </body>
 </html>
