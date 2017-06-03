@@ -1,14 +1,15 @@
 <html>
 <head>
+ <noscript>  <meta http-equiv="refresh" content="0;url=https://untxt.github.io/noscript/" />   </noscript>
 <!------------------------------------------------------------------------------------------------------------------------
 
 <center>
 <div class="post">
 <div class="tosp"></div>
-<div class="usr">Name here<div>
+<div class="usr">Shekhar Tyagi<div>
 <hr>
-<img src="url" class="im">
-<div class="para">caption</div>
+<img src="https://s-media-cache-ak0.pinimg.com/236x/ab/47/37/ab473736455bd286bc48505270db0cdc.jpg" class="im">
+<div class="para">being successfull is not the game of adult but the game of children because they don't get caught by dreaming</div>
 <br>
 <div class="br"></div>
 
@@ -29,7 +30,7 @@
 welcome to St. Anthony's School
 </title>
 </head>
-<body >
+<body>
 
 <div id="cont">
 <header id="head"><center>Home</center></header>
@@ -37,21 +38,7 @@ welcome to St. Anthony's School
 
 
 <!--start new post-->
-	
-<center>
-<div class="post">
-<div class="tosp"></div>
-<div class="usr">Sumit Tyagi<div>
-<hr>
-<img src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-0/cp0/e15/q65/p320x320/255419_430622723655741_307366912_n.jpg?efg=eyJpIjoiYiJ9&oh=08d10487debb7e9422d498a5925f9a39&oe=59B2CECE" class="im">
-<div class="para">“Even if we get freedom by Gandhi's ways, it will be of no use. Power will shift from white dogs to brown dogs who will eat common man. I am sure India will get freedom in next 13-15 years and then corruption and crime will be at rise for next 45-50 years." Bhagat Singh was the man who forced Congress to demand Full Independence (Purna Swaraj). Earlier Congress, Gandhi and Nehru were demanding only Dominion Status (Half Independence) and they were against Full Independence. It was the popularity of Bhagat Singh and his views that forced them to demand Full Independence. Now you can guess who gave you your freedom. Long live the revolution. 
-Jai Hind.</div>
-<br>
-<div class="br"></div>
 
-</div>
-</center>
-	
 <!------------------------------------------------------------------------------------------------------------------------>
 <center>
 <div class="post"><div class="tosp"></div>
@@ -90,31 +77,6 @@ Jai Hind.</div>
 
 </div>
 </center>
-<center>
-<div class="post"><div class="tosp"></div>
-<div class="usr">Mirza Harsh Singh i<div>
-<hr>
-<img src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-0/cp0/e15/q65/p320x320/18835566_337984926618996_5878245065842577949_n.jpg?efg=eyJpIjoiYiJ9&oh=d05396f5931919d0a352744abfce9991&oe=59E95C35" class="im">
-<div class="para">You do not have to stay or run, you just have to keep walking.</div>
-<br>
-<div class="br"></div>
-
-</div>
-</center>
-
-<center>
-<div class="post">
-<div class="tosp"></div>
-<div class="usr">Vikramjeet Singh<div>
-<hr>
-<img src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-0/cp0/e15/q65/p240x240/18765725_248071005675396_5874886767930740980_n.jpg?efg=eyJpIjoiYiJ9&oh=5e4000c9a2490a6524ac37fad9e81a5d&oe=59E432A5" class="im">
-
-<br>
-<div class="br"></div>
-
-</div>
-</center>
-
 
 <!--end-->
 
@@ -125,109 +87,17 @@ Jai Hind.</div>
 
 <!--write post-->
 <div id="editnew">
+
 <div id="back" align="right">
 </div>
-
-<textarea placeholder="Hey there!what is in your mind."> </textarea>
+<div="cen"><center>
+<textarea placeholder="Hey there!what is in your mind."></textarea>
 <input type="file" id="imag" value="Upload"><br><button id="sum" >Submit</button>
+</center>
+</div>
+<script src="home.js">
 
-<script>
- $(document).ready(function(){
-        $('#new').click(function(){
-		    $('#cont').hide();
-			$('#editnew').show(900);
-			$('#new').css({
-			'transform': 'rotate(180deg)'	
-			});
-		});
-	
-  });
-
-  
-var htm = document.getElementById('back');
-htm.addEventListener('click', function(){
- var editnew = document.getElementById('editnew');
- var cont = document.getElementById('cont');
- editnew.style.display="none";
- cont.style.display="block";
-
-});
 </script>
-
-
-<script src="https://www.gstatic.com/firebasejs/4.1.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBmDC4nqFtEo0mf_HjEzcWc17JUORp8bJQ",
-    authDomain: "stantschool-49dcc.firebaseapp.com",
-    databaseURL: "https://stantschool-49dcc.firebaseio.com",
-    projectId: "stantschool-49dcc",
-    storageBucket: "stantschool-49dcc.appspot.com",
-    messagingSenderId: "464055172731"
-  };
-  firebase.initializeApp(config);
-  
-var htm = document.getElementById('sum');
-htm.addEventListener('click', function(){
-      
-	  var storageRef = firebase.storage().ref();
-	   
-	   // File or Blob named mountains.jpg
-var file = ...
-
-// Create the file metadata
-var metadata = {
-  contentType: 'image/jpeg'
-};
-
-// Upload file and metadata to the object 'images/mountains.jpg'
-var uploadTask = storageRef.child('images/' + file.name).put(file, metadata);
-
-// Listen for state changes, errors, and completion of the upload.
-uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
-  function(snapshot) {
-    // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
-    var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-    console.log('Upload is ' + progress + '% done');
-    switch (snapshot.state) {
-      case firebase.storage.TaskState.PAUSED: // or 'paused'
-        console.log('Upload is paused');
-        break;
-      case firebase.storage.TaskState.RUNNING: // or 'running'
-        console.log('Upload is running');
-        break;
-    }
-  }, function(error) {
-
-  // A full list of error codes is available at
-  // https://firebase.google.com/docs/storage/web/handle-errors
-  switch (error.code) {
-    case 'storage/unauthorized':
-      // User doesn't have permission to access the object
-      break;
-
-    case 'storage/canceled':
-      // User canceled the upload
-      break;
-
-    ...
-
-    case 'storage/unknown':
-      // Unknown error occurred, inspect error.serverResponse
-      break;
-  }
-}, function() {
-  // Upload completed successfully, now we can get the download URL
-  var downloadURL = uploadTask.snapshot.downloadURL;
-});
-
-
-
-
-});
-</script>
-
 
 </div
 
