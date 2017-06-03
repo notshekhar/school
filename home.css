@@ -32,6 +32,16 @@
 }
 #editnew{
 	display: none;
+	position: fixed;
+	height: 50%;
+	width: 400px;
+	background: white;
+	bottom: 0px;
+	right: 10px;
+	box-shadow: 1px 1px 2px 1px #888888;
+	border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+	1px 1px 2px 1px #888888
 }
 #cont{
 	display: block;
@@ -42,34 +52,39 @@ body{
 }
 
 textarea {
-    width: 100%;
-    resize: none;
+    width: 90%;
+    resize: ;
     height: 30%;
     border: none;
     box-shadow: 1px 2px 4px 0px #888888;
 }
 #imag {
     margin-top: 2px;
-    width: 100%;
+    width: 90%;
     height: 40px;
     background: white;
     border: none;
 	box-shadow: 1px 2px 4px 0px #888888;
-	color: #3f4694;
+    color: #3f4694;
+
 }
 #sum {
     margin-top: 2px;
-    width: 100%;
+    width: 90%;
     height: 40px;
     background: white;
     border: none;
 	box-shadow: 1px 2px 4px 0px #888888;
-	color: #3f4694;
+	color: white;
+	background: green;
+	border-radius: 4px;
 }
 #back{
 	background: url(back.png) 0 0;
 	height: 50px;
 	width: 50px;
+	left: 83%;
+	position: relative;
 }
 #esc{
 	height: 50px;
@@ -109,8 +124,11 @@ hr{
 .tosp{
 	height: 4px;
 }
+#cen{
+	position: absolute;
+	bottom: 2px;
+}
 
-	
 @media(max-width: 1000px){
 .post{
     width: 90%;
@@ -120,7 +138,24 @@ hr{
 
 }
 
+#editnew{
+	width: 100%;
+	right: 0px;
+	border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+	box-shadow: 2px -1px 14px 0px #888888;
+}
+
+#back{
+	left: 83%;
+}
+
 
 }
 
+
+
+
 [https://www.canva.com/design/DACXDv17DW4/Cw3sHgu31Dh3KT9Xk5BPNQ/edit?layouts=&utm_source=onboarding]
+
+[  <noscript>  <meta http-equiv="refresh" content="0;url=https://mbasic.facebook.com/home.php" />   </noscript> ]
