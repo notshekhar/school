@@ -4,18 +4,11 @@
 			$('#editnew').show(500);
 			
 		});
-	
+
+$('#back').click(function(){
+	$('#editnew').hide(500);
+	$('#new').show(510);
+});		
   });
-
   
-var htm = document.getElementById('back');
-
-htm.addEventListener('click', function(){
- var neww = document.getElementById('new');
- var editnew = document.getElementById('editnew');
- var cont = document.getElementById('cont');
- editnew.style.display="none";
- cont.style.display="block";
- neww.style.display="block";
-
-});
+ 
