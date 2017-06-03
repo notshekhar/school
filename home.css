@@ -36,7 +36,7 @@
 	background: white;
 	bottom: 0px;
 	right: 10px;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .20);
 	border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 
@@ -126,7 +126,11 @@ hr{
 	position: absolute;
 	bottom: 2px;
 }
-
+#fix{
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+}
 @media(max-width: 1000px){
 .post{
     width: 90%;
