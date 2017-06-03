@@ -21,11 +21,9 @@
 	border: none;
     box-shadow: 1px 2px 4px 0px #888888;
     outline: none;
-	content: url(ed.png);
+	
 }
-#new:hover{
-    transform: rotate(180deg);	
-}
+
 #img {
 	position: relative;
 	left:-4px;
@@ -38,17 +36,17 @@
 	background: white;
 	bottom: 0px;
 	right: 10px;
-	box-shadow: 1px 1px 2px 1px #888888;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12);
 	border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-	1px 1px 2px 1px #888888
+
 }
 #cont{
 	display: block;
 }
 body{
 	font-family: Tahoma;
-	background: #f7f9fa;
+	background: #E9EBEE;
 }
 
 textarea {
