@@ -116,7 +116,6 @@ textarea {
 	border-radius: 4px;
 }
 #back{
-	background: url({{ url_for('static', filename="img/back.png") }}) 0 0;
 	height: 50px;
 	width: 50px;
 	left: 83%;
