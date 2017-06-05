@@ -35,7 +35,8 @@ if($('#put').val().length > 1){
 });
 
 
-
   });
   
- 
+ document.getElementById("uploadBtn").onchange = function () {
+    document.getElementById("uploadFile").value = this.value;
+};
