@@ -1,5 +1,9 @@
 .abc{
-     width: 40px;
+     height: 80px;
+	position: absolute;
+	width: 100%;
+	top: 0px;
+	left: 0px;
 }
 #head {
     position: fixed;
@@ -75,7 +79,7 @@ textarea {
 	position: relative;
 }
 #put {
-    position: relative;
+    position: absolute;
     width: 50%;
     border-top: none;
     border-left: none;
@@ -86,7 +90,7 @@ textarea {
     color: white;
     outline: none;
     height: 50px;
-    top: -45px;
+    top: -20px;
     font-size: 20px;
     padding: 10px;
 
