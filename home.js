@@ -33,9 +33,7 @@ if($('#put').val().length > 1){
 	});
 }
 });
-$('$uploadBtn').change(function(){
-$('#uploadFile').val(this.val(););
-});
+
 
   });
   
