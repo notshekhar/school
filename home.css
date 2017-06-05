@@ -2,7 +2,7 @@
      height: 80px;
 	position: absolute;
 	width: 100%;
-	top: 0px;
+	top: 20px;
 	left: 0px;
 }
 #head {
@@ -75,8 +75,8 @@ textarea {
 	top: 30px;
 }
 .wrap{
-	top: 20px;
-	position: relative;
+	top: 100px;
+	position: absolute;
 }
 #put {
     position: absolute;
@@ -93,6 +93,7 @@ textarea {
     top: -20px;
     font-size: 20px;
     padding: 10px;
+	left: 25%;
 
 }
 #nam {
