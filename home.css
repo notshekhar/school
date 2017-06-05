@@ -78,6 +78,8 @@ textarea {
 .wrap{
 	top: 100px;
 	position: absolute;
+	width: 100%;
+	
 }
 #put {
     position: absolute;
