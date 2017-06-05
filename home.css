@@ -203,6 +203,7 @@ hr{
 	border-top-left-radius: 0px;
     border-top-right-radius: 0px;
 	box-shadow: 2px -1px 14px 0px #888888;
+	height: 100%;
 }
 
 #back{
