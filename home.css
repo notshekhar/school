@@ -61,11 +61,11 @@ body{
 
 textarea {
 	background: rgba(255, 255, 255, 0.04);
-	color: white;
+	color: grey;
 	outline: none;
     width: 90%;
     resize: ;
-    height: 30%;
+    height: 40px;
 	border-top: none;
 	border-left: none;
 	border-right: none;
@@ -73,6 +73,7 @@ textarea {
 	border-bottom-color: grey;
 	border-bottom-style: dashed;
 	top: 30px;
+	font-size: 15px;
 }
 .wrap{
 	top: 100px;
