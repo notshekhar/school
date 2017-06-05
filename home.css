@@ -1,3 +1,6 @@
+.abc{
+     width: 40px;
+}
 #head {
     position: fixed;
     top: 0px;
@@ -72,7 +75,7 @@ textarea {
 	position: relative;
 }
 #put {
-    position: absolute;
+    position: relative;
     width: 50%;
     border-top: none;
     border-left: none;
@@ -83,10 +86,10 @@ textarea {
     color: white;
     outline: none;
     height: 50px;
-    top: -20px;
+    top: -45px;
     font-size: 20px;
     padding: 10px;
-    left: 100px;
+
 }
 #nam {
     position: relative;
