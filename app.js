@@ -20,7 +20,7 @@ storageRef.child('stantschool/').getDownloadURL().then(function(url) {
   
   var updates = {};
   var postData = {
-    usr: new Date().getDate();
+
     caption: document.getElementById('cap').value;
     name: document.getElementById('put').value;
     url: url;
