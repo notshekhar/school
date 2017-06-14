@@ -15,13 +15,12 @@ var storageRef = firebase.storage().ref('/stantschool/' + fileName);
   var uploadTask = storageRef.put(selectedFile);
   
 storageRef.child('stantschool/').getDownloadURL().then(function(url) {
-var today = new Date();
-var dd = today.getDate();
+
   var postKey = firebase.database().ref('posts/').push().key;
   
   var updates = {};
   var postData = {
-    usr: dd;
+    usr: new Date().getDate();
     caption: document.getElementById('cap').value;
     name: document.getElementById('put').value;
     url: url;
