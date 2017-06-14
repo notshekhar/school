@@ -15,7 +15,7 @@ var storageRef = firebase.storage().ref('/stantschool/' + fileName);
   var uploadTask = storageRef.put(selectedFile);
   
 storageRef.child('images/stars.jpg').getDownloadURL().then(function(url) {
-  console.log(url);
+  alert(url);
 });
   
 }
