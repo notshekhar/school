@@ -4,5 +4,6 @@ function upload(){
 var selectedFile = this.value
 }
 function uploadFile(){
-alert(selectedFile);
+  var selected = var file = document.getElementById('imag').value
+alert(selected);
 }
