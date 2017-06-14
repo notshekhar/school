@@ -10,6 +10,6 @@ uploaded.addEventListener('click', uploadFile);
 function uploadFile(){
 var path = document.getElementById("imag").value;
 var fileName = path.match(/[^\/\\]+$/);
-console.log(fileName.[0]);
+console.log(fileName[0]);
 
 }
