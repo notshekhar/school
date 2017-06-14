@@ -15,12 +15,12 @@ var storageRef = firebase.storage().ref('/stantschool/' + fileName);
   var uploadTask = storageRef.put(selectedFile);
   
 storageRef.child('stantschool/').getDownloadURL().then(function(url) {
- usr = 1;
+var usr = 1;
   var postKey = firebase.database().ref('posts/').push().key;
   
   var updates = {};
   var postData = {
-    usr: usr;
+    usr: usr++;
     caption: document.getElementById('cap').value;
     name: document.getElementById('put').value;
     url: url;
@@ -28,7 +28,6 @@ storageRef.child('stantschool/').getDownloadURL().then(function(url) {
   updates[''/posts/+postKey] = postData;
  firebase.database().ref('posts/' + postKey);
   
-  usr++;
 });
   
 }
