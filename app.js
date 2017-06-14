@@ -16,4 +16,4 @@ var storageRef = firebase.storage().ref('/stantschool/' + fileName);
   
   storageRef.getDownloadURL().then(function(url) {
         alert(url);
-}
+});
