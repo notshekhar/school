@@ -20,13 +20,12 @@ storageRef.child('stantschool/').getDownloadURL().then(function(url) {
   
   var updates = {};
   var postData = {
-
     caption: document.getElementById('cap').value;
     name: document.getElementById('put').value;
     url: url;
   } 
   updates[''/posts/+postKey] = postData;
- firebase.database().ref('posts/' + postKey);
+ firebase.database().ref().update(updates);
   
 });
   
