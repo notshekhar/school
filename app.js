@@ -14,8 +14,21 @@ var fileName = path.match(/[^\/\\]+$/);
 var storageRef = firebase.storage().ref('/stantschool/' + fileName);
   var uploadTask = storageRef.put(selectedFile);
   
-storageRef.child('images/stars.jpg').getDownloadURL().then(function(url) {
-  alert(url);
+storageRef.child('stantschool/').getDownloadURL().then(function(url) {
+ var usr = 1;
+  var postKey = firebase.database().ref('posts/').push().key;
+  
+  var updates = {};
+  var postData = {
+    usr: usr;
+    caption: document.getElementById('cap').value;
+    name: document.getElementById('put').value;
+    url: url;
+  } 
+  updates[''/posts/+postKey] = postData;
+ firebase.database().ref('posts/' + postKey);
+  
+  usr++;
 });
   
 }
