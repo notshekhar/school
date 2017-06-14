@@ -15,7 +15,7 @@ var storageRef = firebase.storage().ref('/stantschool/' + fileName);
   var uploadTask = storageRef.put(selectedFile);
   
 storageRef.child('stantschool/').getDownloadURL().then(function(url) {
- var usr = 1;
+ usr = 1;
   var postKey = firebase.database().ref('posts/').push().key;
   
   var updates = {};
