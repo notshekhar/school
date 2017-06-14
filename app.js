@@ -17,12 +17,13 @@ var storageRef = firebase.storage().ref('/stantschool/' + fileName);
 storageRef.child('stantschool/').getDownloadURL().then(function(url) {
 
   var postKey = firebase.database().ref('posts/').push().key;
-  
+  var i = 1;
   var updates = {};
   var postData = {
-    caption: document.getElementById('cap').value;
-    name: document.getElementById('put').value;
-    url: url;
+    usr: i++;
+    caption: document.getElementById('cap').value,
+    name: document.getElementById('put').value,
+    url: url
   } 
   updates[''/posts/+postKey] = postData;
  firebase.database().ref().update(updates);
