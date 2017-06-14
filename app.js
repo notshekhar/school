@@ -3,7 +3,7 @@ var uploaded = document.getElementById('sum');
 file.addEventListener('change', upload);
 
 function upload(event){
-var selectedFile = event.target.files[0];
+selectedFile = event.target.files[0];
 }
 uploaded.addEventListener('click', uploadFile);
 
