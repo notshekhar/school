@@ -11,7 +11,7 @@ function uploadFile(){
 var path = document.getElementById("imag").value;
 var fileName = path.match(/[^\/\\]+$/);
   
-var storageRef = firebase.storage().ref('/stantschool/' + fileName);
+var storageRef = firebase.storage().ref(fileName);
   var uploadTask = storageRef.put(selectedFile);
   
   storageRef.getDownloadURL().then(function(url) {
