@@ -8,7 +8,7 @@ var selectedFile = this.value;
 uploaded.addEventListener('click', uploadFile);
 
 function uploadFile(){
-var path = document.getElementById("whatever").value;
+var path = document.getElementById("imag").value;
 var fileName = path.match(/[^\/\\]+$/);
 console.log(fileName);
 
