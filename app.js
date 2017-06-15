@@ -17,7 +17,8 @@ var storageRef = firebase.storage().ref('/stantschool/' + fileName);
  storageRef.getDownloadURL().then(function(url) {
    
    function writeNewPost() { 
-   var usr = 1;
+   var today = new Date();
+     var usr = today.getDate();
    var caption = document.getElementById('cap').value;
    var name = document.getElementById('put').value;
   
@@ -33,7 +34,6 @@ var storageRef = firebase.storage().ref('/stantschool/' + fileName);
   updates['/posts/' + newPostKey] = postData;
 
   return firebase.database().ref().update(updates);
-usr++;
 }
 
 console.log(url);
