@@ -16,9 +16,6 @@ var storageRef = firebase.storage().ref('/stantschool/' + fileName);
   
 
 storageRef.child().getDownloadURL().then(function(url) {
-  // `url` is the download URL for 'images/stars.jpg'
-
- 
   var xhr = new XMLHttpRequest();
   xhr.responseType = 'blob';
   xhr.onload = function(event) {
@@ -26,9 +23,12 @@ storageRef.child().getDownloadURL().then(function(url) {
   };
   xhr.open('GET', url);
   xhr.send();
+  
 console.log(url);
+  
 }).catch(function(error) {
-  // Handle any errors
+
+  
 });
   
   var postKey = firebase.database().ref('posts/').push().key;
