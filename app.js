@@ -14,8 +14,12 @@ var fileName = path.match(/[^\/\\]+$/);
 var storageRef = firebase.storage().ref('/stantschool/' + fileName);
   var uploadTask = storageRef.put(selectedFile);
   
-storageRef.child('stantschool/').getDownloadURL().then(function(url) {
-var downloadUrl = url;
+uploadTask.addEventListener('state_change', function(snapshot){
+   
+}, function(error){
+  
+},function(){
+var downloadUrl = uploadTask.snapshot.downloadURL;
   var postKey = firebase.database().ref('posts/').push().key;
   var i = 1;
   var updates = {};
