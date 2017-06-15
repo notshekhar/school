@@ -19,7 +19,7 @@ storageRef.getDownloadURL().then(function(url) {
   
  
  
-  function writePost(){ 
+  function writeNewPost() { 
    var usr = 1;
    var caption = document.getElementById('cap').value;
    var name = document.getElementById('put').value;
