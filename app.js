@@ -15,10 +15,7 @@ var storageRef = firebase.storage().ref('/stantschool/' + fileName);
   var uploadTask = storageRef.put(selectedFile);
 
  storageRef.getDownloadURL().then(function(url) {
-   console.log(url);
-
-
- });
+   
    function writeNewPost() { 
    var today = new Date();
    var usr = today.getDate();
@@ -39,5 +36,10 @@ var storageRef = firebase.storage().ref('/stantschool/' + fileName);
 
 }   
  
+   console.log(url);
+
+
+ });
+  
 
 }
