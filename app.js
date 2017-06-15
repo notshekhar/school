@@ -26,11 +26,6 @@ storageRef.getDownloadURL().then(function(url) {
   
 console.log(url);
   
-}).catch(function(error) {
-
-  
-});
-  
   var postKey = firebase.database().ref('posts/').push().key;
   var i = 1;
   var updates = {};
@@ -39,9 +34,16 @@ console.log(url);
     caption: document.getElementById('cap').value,
     name: document.getElementById('put').value,
     url: url
-  } 
-  updates[''/posts/+postKey] = postData;
- firebase.database().ref().update(updates);
+         } 
+   updates[''/posts/+postKey] = postData;
+  firebase.database().ref().update(updates);
+  
+}).catch(function(error) {
+
+  
+});
+  
+
 
 
 }
