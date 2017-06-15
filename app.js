@@ -19,11 +19,12 @@ storageRef.getDownloadURL().then(function(url) {
   
  
  
+  function writePost(){ 
    var usr = 1;
-var caption = document.getElementById('cap').value;
- var name = document.getElementById('put').value;
+   var caption = document.getElementById('cap').value;
+   var name = document.getElementById('put').value;
   
-  var postData = {
+   var postData = {
     usr: usr++,
     name: name,
     cap: caption,
@@ -36,7 +37,7 @@ var caption = document.getElementById('cap').value;
 
   return firebase.database().ref().update(updates);
 
-  
+  }
 
 console.log(url);
  
