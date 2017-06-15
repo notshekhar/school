@@ -28,14 +28,13 @@ var storageRef = firebase.storage().ref('/stantschool/' + fileName);
     image: url
   };
 
-  var newPostKey = firebase.database().ref().child('posts/').push().key;
+  var newPostKey = firebase.database().ref().child('/posts/').push().key;
   var updates = {};
   updates['/posts/'+newPostKey] = postData;
  return firebase.database().ref().update(updates);
 
 }   
  
-   console.log(url);
 
 
  });
