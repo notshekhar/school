@@ -14,18 +14,15 @@ var fileName = path.match(/[^\/\\]+$/);
 var storageRef = firebase.storage().ref('/stantschool/' + fileName);
   var uploadTask = storageRef.put(selectedFile);
 
-  
-  storageRef.getDownloadURL().then(function(url) {
-  
- 
- 
-  function writeNewPost() { 
+ storageRef.getDownloadURL().then(function(url) {
+   
+   function writeNewPost() { 
    var usr = 1;
    var caption = document.getElementById('cap').value;
    var name = document.getElementById('put').value;
   
    var postData = {
-    usr: usr++,
+    usr: usr,
     name: name,
     cap: caption,
     image: url
@@ -36,25 +33,11 @@ var storageRef = firebase.storage().ref('/stantschool/' + fileName);
   updates['/posts/' + newPostKey] = postData;
 
   return firebase.database().ref().update(updates);
-
-  }
+usr++;
+}
 
 console.log(url);
  
-});
-
-uploadTask.on('state_changed',
-      function progress(snapshot){
-  var uploader = document.getElementById('uploader');
-  uploader.style.display="block";
-  
-   var pert = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-  uploader.value = pert;
-  
-},function error(err){
-
-}, function complete(){
-
 });
 
 
