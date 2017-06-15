@@ -16,20 +16,12 @@ var storageRef = firebase.storage().ref('/stantschool/' + fileName);
 
   
 storageRef.getDownloadURL().then(function(url) {
+  var i = 1;
+  var caption = document.getElementById('cap').value;
+  var name = document.getElementById('put').value;
+  
   
 
-  var i = 1;
-  var postKey = firebase.database().ref('posts/').push().key;
-  var updates = {};
-  var postData = {
-    usr: i++, 
-    caption: document.getElementById('cap').value,
-    name: document.getElementById('put').value,
-    url: url
-      } 
-   updates[''/posts/+postKey] = postData;
-  firebase.database().ref().update(updates);
-  
 console.log(url);
  
 });
