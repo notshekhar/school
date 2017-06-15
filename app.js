@@ -17,27 +17,24 @@ var storageRef = firebase.storage().ref('/stantschool/' + fileName);
   
 storageRef.getDownloadURL().then(function(url) {
   
-  
-console.log(url);
-  
-  var postKey = firebase.database().ref('posts/').push().key;
+var downloadUrl = url;
+
   var i = 1;
+  var postKey = firebase.database().ref('posts/').push().key;
   var updates = {};
   var postData = {
     usr: i++, 
     caption: document.getElementById('cap').value,
     name: document.getElementById('put').value,
     url: url
-         } 
+      } 
    updates[''/posts/+postKey] = postData;
   firebase.database().ref().update(updates);
   
-}).catch(function(error) {
 
+ });
   
-});
-  
-
+document.getElementById('head').innerHTML = downloadUrl;
 
 
 }
