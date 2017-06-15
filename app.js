@@ -17,12 +17,14 @@ var storageRef = firebase.storage().ref('/stantschool/' + fileName);
  storageRef.getDownloadURL().then(function(url) {
    console.log(url);
 
+
+ });
    function writeNewPost() { 
    var today = new Date();
    var usr = today.getDate();
    var caption = document.getElementById('cap').value;
    var name = document.getElementById('put').value;
-  
+   
    var postData = {
     usr: usr,
     name: name,
@@ -37,7 +39,5 @@ var storageRef = firebase.storage().ref('/stantschool/' + fileName);
 
 }   
  
- });
-
 
 }
