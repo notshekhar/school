@@ -30,10 +30,11 @@ storageRef.getDownloadURL().then(function(url) {
    updates[''/posts/+postKey] = postData;
   firebase.database().ref().update(updates);
   
-
- });
-  
 console.log(url);
+ 
+});
+  
+
 
 
 }
