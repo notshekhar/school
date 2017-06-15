@@ -29,7 +29,7 @@ function writeNewPost(usr, name, url, caption) {
     image: url
   };
 
-  var newPostKey = firebase.database().ref().child('posts').push().key;
+  var newPostKey = firebase.database().ref().child('/posts/').push().key;
   var updates = {};
   updates['/posts/' + newPostKey] = postData;
 
