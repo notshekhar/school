@@ -15,7 +15,7 @@ var storageRef = firebase.storage().ref('/stantschool/' + fileName);
   var uploadTask = storageRef.put(selectedFile);
   
 
-storageRef.child().getDownloadURL().then(function(url) {
+storageRef.getDownloadURL().then(function(url) {
   var xhr = new XMLHttpRequest();
   xhr.responseType = 'blob';
   xhr.onload = function(event) {
