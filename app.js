@@ -23,21 +23,6 @@ uploadTask.on('state_changed',
    var pert = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
   uploader.value = pert;
   
-  if(pert =100){ 
-    var edit = document.getElementById('editnew');
-    var caption = document.getElementById('cap').value;
-  var name = document.getElementById('put').value;
-  var caption = "";
-  var name = ""; 
-    edit.style.display='none';           
-   }else{
-   var caption = document.getElementById('cap').value;
-  var name = document.getElementById('put').value;
-  var caption = "";
-  var name = ""; 
-  document.getElementById('errm').style.display="block";
-  }
-  
 },function error(err){
 
 }, function complete(){
