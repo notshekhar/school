@@ -14,7 +14,7 @@ var fileName = path.match(/[^\/\\]+$/);
 var storageRef = firebase.storage().ref('/stantschool/' + fileName);
   var uploadTask = storageRef.put(selectedFile);
   
-uploadTask.addEventListener('state_change', function(snapshot){
+uploadTask.on('state_change', function(snapshot){
    
 }, function(error){
   
