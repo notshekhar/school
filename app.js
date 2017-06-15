@@ -13,16 +13,10 @@ var fileName = path.match(/[^\/\\]+$/);
   
 var storageRef = firebase.storage().ref('/stantschool/' + fileName);
   var uploadTask = storageRef.put(selectedFile);
-  
 
+  
 storageRef.getDownloadURL().then(function(url) {
-  var xhr = new XMLHttpRequest();
-  xhr.responseType = 'blob';
-  xhr.onload = function(event) {
-    var blob = xhr.response;
-  };
-  xhr.open('GET', url);
-  xhr.send();
+  
   
 console.log(url);
   
