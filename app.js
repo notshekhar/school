@@ -13,23 +13,9 @@ var fileName = path.match(/[^\/\\]+$/);
   
 var storageRef = firebase.storage().ref('/stantschool/' + fileName);
   var uploadTask = storageRef.put(selectedFile);
-var uploader = document.getElementById('uploader');
 
-uploadTask.on('state_changed',
-       function progress(snapshot){
-  var uploader = document.getElementById('uploader');
-  uploader.style.display="block";
   
-   var pert = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-  uploader.value = pert;
-  
-},function error(err){
-
-}, function complete(){
-
-});  
-  
-storageRef.getDownloadURL().then(function(url) {
+  storageRef.getDownloadURL().then(function(url) {
   
  
  
@@ -56,8 +42,20 @@ storageRef.getDownloadURL().then(function(url) {
 console.log(url);
  
 });
-  
 
+uploadTask.on('state_changed',
+      function progress(snapshot){
+  var uploader = document.getElementById('uploader');
+  uploader.style.display="block";
+  
+   var pert = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+  uploader.value = pert;
+  
+},function error(err){
+
+}, function complete(){
+
+});
 
 
 }
