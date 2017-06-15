@@ -15,14 +15,11 @@ var storageRef = firebase.storage().ref('/stantschool/' + fileName);
   var uploadTask = storageRef.put(selectedFile);
 
  storageRef.getDownloadURL().then(function(url) {
-   
    console.log(url);
-   downloadUrl = url;
- });
-alert(downloadUrl);
-function writeNewPost() { 
+
+   function writeNewPost() { 
    var today = new Date();
-     var usr = today.getDate();
+   var usr = today.getDate();
    var caption = document.getElementById('cap').value;
    var name = document.getElementById('put').value;
   
@@ -38,6 +35,9 @@ function writeNewPost() {
   updates['/posts/' + newPostKey] = postData;
  return firebase.database().ref().update(updates);
 
-}
+}   
+ 
+ });
+
 
 }
