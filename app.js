@@ -17,11 +17,11 @@ var storageRef = firebase.storage().ref('/stantschool/' + fileName);
   
 storageRef.getDownloadURL().then(function(url) {
   
-  var usr = 1;
-  var caption = document.getElementById('cap').value;
-  var name = document.getElementById('put').value;
+ usr = 1;
+ caption = document.getElementById('cap').value;
+ name = document.getElementById('put').value;
   
-function writeNewPost(usr, name, url, caption) {
+function writeNewPost() {
   var postData = {
     usr: usr++,
     name: name,
