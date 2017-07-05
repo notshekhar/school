@@ -20,7 +20,8 @@ var starsRef = storageRef.child('stantschool/'+fileName);
 
 // Get the download URL
 starsRef.getDownloadURL().then(function(url) {
-  // Insert url into an <img> tag to "download"
+console.log(url);
+console.log(fileName);
 }).catch(function(error) {
 
   // A full list of error codes is available at
