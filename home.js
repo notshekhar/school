@@ -1,4 +1,9 @@
  $(document).ready(function(){
+
+
+	 
+	 
+	 
         $('#new').click(function(){
 		     $('#new').hide(400);
 			$('#editnew').show(500);
