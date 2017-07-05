@@ -16,7 +16,7 @@ var storageRef = firebase.storage().ref('/stantschool/' + fileName);
 
   
 // Create a reference to the file we want to download
-var starsRef = storageRef.child('stantschool/');
+var starsRef = storageRef.child('stantschool/'+fileName);
 
 // Get the download URL
 starsRef.getDownloadURL().then(function(url) {
