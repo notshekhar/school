@@ -132,11 +132,11 @@ firebase.database().ref('/posts/').once('value').then(function(snapshot) {
   var ima = snapshot.val().image;
   var nme = snapshot.val().name;
   var usr = snapshot.val().usr;
- var post = document.createElement(div);
+ var post = document.createElement("div");
  post.setAttribute("class", "post");
-  var top = document.createElement(div);
+  var top = document.createElement("div");
  top.setAttribute("class", "tosp");
-  var usrdiv = document.createElement(div);
+  var usrdiv = document.createElement("div");
  usrdiv.innerHTML=nme;
  
  
