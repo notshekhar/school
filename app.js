@@ -14,29 +14,24 @@ var fileName = path.match(/[^\/\\]+$/);
 var storageRef = firebase.storage().ref('/stantschool/' + fileName);
   var uploadTask = storageRef.put(selectedFile);
 
-  
-  
-uploadTask.getDownloadURL().then(function(url) {
-console.log(url);
-console.log(fileName);
-}).catch(function(error) {
+ function writeNewPost(url) {
+  // A post entry.
+  var postData = {
+    cap: document.getElementById('cap').value,
+    image: stantschool.png,
+    name: document.getElementById('cap').value,
+    usr: 1
+  };
 
-  // A full list of error codes is available at
-  // https://firebase.google.com/docs/storage/web/handle-errors
-  switch (error.code) {
-    case 'storage/object_not_found':
-      // File doesn't exist
-      break;
+  // Get a key for a new Post.
+  var newPostKey = firebase.database().ref().child('posts').push().key;
 
-    case 'storage/unauthorized':
-      // User doesn't have permission to access the object
-      break;
+  // Write the new post's data simultaneously in the posts list and the user's post list.
+  var updates = {};
+  updates['/posts/' + newPostKey] = postData;
 
-    case 'storage/canceled':
-      // User canceled the upload
-      break;
-  }
-});            
+  return firebase.database().ref().update(updates);
+}           
   
   
 
