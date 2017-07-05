@@ -5,7 +5,7 @@
 			
 		});
 
-$('#back').click(function(){
+$('._3PQpfi4b').click(function(){
 	$('#editnew').hide(500);
 	$('#new').show(510);
 });		
