@@ -27,16 +27,15 @@ welcome to St. Anthony's School
 <script>
 $(document).ready(function(){
 $('#google').click(function(){
-   
-  var provider = new firebase.auth.GoogleAuthProvider();
-  
-firebase.auth().signInWithPopup(provider).then(function(result) {
-  // This gives you a Google Access Token. You can use it to access the Google API.
-  var token = result.credential.accessToken;
+  firebase.auth().getRedirectResult().then(function(result) {
+  if (result.credential) {
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    var token = result.credential.accessToken;
+    // ...
+  }
   // The signed-in user info.
+    windows.location('home.htm');
   var user = result.user;
-windows.location('home.htm');
-  // ...
 }).catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
@@ -46,7 +45,13 @@ windows.location('home.htm');
   // The firebase.auth.AuthCredential type that was used.
   var credential = error.credential;
   // ...
-});
+}); 
+ 
+  
+  
+  
+  
+  
   
 });
 });
