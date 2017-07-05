@@ -22,12 +22,8 @@ var starsRef = storageRef.child('stantschool/');
 starsRef.getDownloadURL().then(function(url) {
   console.log(url);
 });
-                               
-                               
-});
+                    
   
   
-  
- 
 
 }
