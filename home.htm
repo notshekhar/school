@@ -126,6 +126,21 @@ welcome to St. Anthony's School
     messagingSenderId: "464055172731"
   };
   firebase.initializeApp(config);
+ 
+firebase.database().ref('/posts/').once('value').then(function(snapshot) {
+  var cap = snapshot.val().cap;
+  var ima = snapshot.val().image;
+  var nme = snapshot.val().name;
+  var usr = snapshot.val().usr;
+ var post = document.createElement(div);
+ post.setAttribute("class", "post");
+  var top = document.createElement(div);
+ top.setAttribute("class", "tosp");
+  var usrdiv = document.createElement(div);
+ usrdiv.innerHTML=nme;
+ 
+ 
+});
 </script>
 <script src="app.js"></script>
 
