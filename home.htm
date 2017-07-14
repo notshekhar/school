@@ -1,5 +1,23 @@
 <html>
 <head>
+<style>
+#p2{
+   width: 100%;
+   background: #3f4694;
+   
+}
+</style>
+<script>
+$(window).load(function(){
+   $('#p2').fadeOut();
+});
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
  <noscript>  <meta http-equiv="refresh" content="0;url=https://untxt.github.io/noscript/" />   </noscript>
 <!------------------------------------------------------------------------------------------------------------------------
 
@@ -31,6 +49,8 @@ welcome to St. Anthony's School
 </title>
 </head>
 <body>
+ <!-- MDL Progress Bar with Indeterminate Progress -->
+<div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
  <div id="errm">sorry something went wrong</div>
 <progress value="0" max="100" id="uploader">0%</progress>
 <div id="cont">
