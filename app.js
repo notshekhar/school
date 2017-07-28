@@ -18,7 +18,7 @@ var storageRef = firebase.storage().ref('/stantschool/' + fileName);
   // A post entry.
   var postData = {
     cap: document.getElementById('cap').value,
-    image: stantschool.png,
+    image: 'stantschool.png',
     name: document.getElementById('cap').value,
     usr: 1
   };
