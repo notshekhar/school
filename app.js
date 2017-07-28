@@ -24,7 +24,7 @@ var storageRef = firebase.storage().ref('/stantschool/' + fileName);
   };
 
   // Get a key for a new Post.
-  var newPostKey = firebase.database().ref();
+  var newPostKey = firebase.database().ref('posts/');
 
  newPostKey.push(postData);
 }           
