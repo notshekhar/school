@@ -24,13 +24,9 @@ var storageRef = firebase.storage().ref('/stantschool/' + fileName);
   };
 
   // Get a key for a new Post.
-  var newPostKey = firebase.database().ref().child('posts').push().key;
+  var newPostKey = firebase.database().ref();
 
-  // Write the new post's data simultaneously in the posts list and the user's post list.
-  var updates = {};
-  updates['/posts/' + newPostKey] = postData;
-
-  return firebase.database().ref().update(updates);
+ newPostKey.push(postData);
 }           
   
   
