@@ -18,7 +18,7 @@ var storageRef = firebase.storage().ref('/stantschool/' + fileName);
 
 //sending data to database
  var newPostKey = firebase.database().ref('posts/');
-var postData{
+var postData={
   cap: document.getElementById('cap').value,
   img: 'url'
   usr: document.getElementById('put').value,
